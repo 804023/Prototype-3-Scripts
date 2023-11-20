@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
-    public float jumpForce;
-    public float gravityModifier;
+    public float jumpForce = 20;
+    public float gravityModifier = 5;
     public bool isOnGround = true;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void onCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         isOnGround = true;
     }
