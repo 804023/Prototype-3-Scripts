@@ -8,9 +8,10 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 20;
     public float gravityModifier = 5;
     public bool isOnGround = true;
-    public bool gameOver = false;
-    private Animator playerAnim;
+    public bool gameOver = false; 
     public ParticleSystem explosionParticle;
+    private Animator playerAnim;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +43,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Game Over!");
             playerAnim.SetBool("Death_b", true);
             playerAnim.SetInteger("DeathType_int", 1);
-            explosionParticle.Play;
+            explosionParticle.Play();
         }
     }
 }
